@@ -1,0 +1,438 @@
+/* ===================================================
+   DASHBOARD — Modern Banking aesthetic
+   =================================================== */
+
+/* ---------- MODERN DASHBOARD SHELL ---------- */
+.modern-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Welcome strip */
+.modern-dashboard__welcome {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.modern-dashboard__greeting {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--color-gray-400);
+  margin: 0 0 0.15rem;
+}
+
+.modern-dashboard__name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-gray-900);
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.modern-dashboard__date {
+  font-size: 0.8rem;
+  color: var(--color-gray-400);
+  margin: 0;
+}
+
+/* ---------- ACCOUNT SUMMARY BANNER ---------- */
+.acct-summary {
+  background: linear-gradient(135deg, #0f49c6 0%, #1565d8 60%, #1e88e5 100%);
+  color: #fff;
+  border-radius: 20px;
+  padding: 2.25rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.acct-summary::before {
+  content: '';
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  top: -160px;
+  right: -100px;
+  pointer-events: none;
+}
+
+.acct-summary__eyebrow {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  opacity: 0.65;
+  margin-bottom: 0.35rem;
+}
+
+.acct-summary__balance {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin-bottom: 0.25rem;
+}
+
+.acct-summary__available {
+  font-size: 0.88rem;
+  opacity: 0.72;
+  margin-bottom: 0.15rem;
+}
+
+.acct-summary__detail {
+  font-size: 0.78rem;
+  opacity: 0.55;
+  font-family: var(--font-family-mono);
+}
+
+.acct-summary__actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.acct-summary__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: 10px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s;
+  border: none;
+  cursor: pointer;
+}
+
+.acct-summary__action--primary {
+  background: #fff;
+  color: var(--color-primary-600);
+}
+
+.acct-summary__action--primary:hover {
+  background: #eef3ff;
+  transform: translateY(-1px);
+  color: var(--color-primary-600);
+}
+
+.acct-summary__action--ghost {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+.acct-summary__action--ghost:hover {
+  background: rgba(255, 255, 255, 0.24);
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+@media (max-width: 575.98px) {
+  .acct-summary {
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .acct-summary__actions {
+    flex-direction: column;
+  }
+
+  .acct-summary__action {
+    justify-content: center;
+  }
+}
+
+/* ---------- INFO CARDS ROW ---------- */
+.info-cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.info-card {
+  background: #fff;
+  border-radius: 16px;
+  border: none;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.info-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.info-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-card__icon--alert {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.info-card__icon--offer {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.info-card__icon--insight {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.info-card__title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-gray-800);
+  margin-bottom: 0.25rem;
+}
+
+.info-card__desc {
+  font-size: 0.78rem;
+  color: var(--color-gray-500);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ---------- ENTERPRISE TRANSACTIONS TABLE ---------- */
+.txn-table-card {
+  background: #fff;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.txn-table-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.txn-table-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-gray-800);
+  margin: 0;
+}
+
+.txn-table-card__controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.txn-table-card__search {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #f9fafb;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.8rem;
+  color: var(--color-gray-600);
+  transition: border-color 0.15s;
+}
+
+.txn-table-card__search:focus-within {
+  border-color: var(--color-primary-400);
+}
+
+.txn-table-card__search input {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 0.8rem;
+  color: var(--color-gray-800);
+  width: 140px;
+}
+
+.txn-table-card__search input::placeholder {
+  color: var(--color-gray-400);
+}
+
+.txn-table-card__filter,
+.txn-table-card__export {
+  background: #f9fafb;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.8rem;
+  color: var(--color-gray-600);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: border-color 0.15s;
+}
+
+.txn-table-card__filter:hover,
+.txn-table-card__export:hover {
+  border-color: var(--color-gray-300);
+  color: var(--color-gray-800);
+}
+
+.txn-table-ent {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.txn-table-ent thead {
+  background: #f9fafb;
+}
+
+.txn-table-ent th {
+  padding: 0.7rem 1.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-gray-500);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.txn-table-ent td {
+  padding: 0.8rem 1.5rem;
+  font-size: 0.84rem;
+  color: var(--color-gray-700);
+  border-top: 1px solid #f5f5f5;
+  vertical-align: middle;
+}
+
+.txn-table-ent tbody tr {
+  transition: background 0.1s;
+}
+
+.txn-table-ent tbody tr:hover {
+  background: #fafbfc;
+}
+
+.txn-table-ent__amount--credit {
+  color: var(--color-success);
+  font-weight: 600;
+}
+
+.txn-table-ent__amount--debit {
+  color: var(--color-danger);
+  font-weight: 600;
+}
+
+.txn-table-ent__badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 8px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.txn-table-ent__badge--credit {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.txn-table-ent__badge--debit {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.txn-table-ent__empty {
+  text-align: center;
+  color: var(--color-gray-400);
+  padding: 2.5rem 1rem;
+  font-size: 0.88rem;
+}
+
+/* ---------- PORTAL LEGACY (keep for back-compat) ---------- */
+.portal-body {
+  background: #f8f9fb;
+  min-height: calc(100vh - var(--topbar-height, 62px));
+  padding: 1.5rem;
+}
+
+.portal-body__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.portal-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.portal-welcome__greeting {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--color-gray-500);
+  margin-bottom: 0.15rem;
+}
+
+.portal-welcome__name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+.portal-welcome__date {
+  font-size: 0.8rem;
+  color: var(--color-gray-400);
+}
+
+/* ---------- PORTAL NAV (blue bar — hidden when GlobalNav active) ---------- */
+.portal-nav {
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+  .modern-dashboard {
+    gap: 1rem;
+  }
+
+  .modern-dashboard__name {
+    font-size: 1.2rem;
+  }
+
+  .portal-body {
+    padding: 1rem;
+  }
+
+  .txn-table-card__header {
+    padding: 1rem;
+  }
+
+  .txn-table-ent th,
+  .txn-table-ent td {
+    padding: 0.6rem 0.8rem;
+  }
+}

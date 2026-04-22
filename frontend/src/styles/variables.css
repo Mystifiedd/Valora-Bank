@@ -1,0 +1,82 @@
+:root {
+  /* Color Palette */
+  --color-primary-50: #e7efff;
+  --color-primary-100: #c4d7ff;
+  --color-primary-200: #8eb4ff;
+  --color-primary-300: #568dff;
+  --color-primary-400: #2f6af1;
+  --color-primary-500: #0f49c6;
+  --color-primary-600: #0d3aac;
+  --color-primary-700: #0b2f8f;
+  --color-accent-teal: #1db5c9;
+  --color-success: #1f9254;
+  --color-warning: #f7a046;
+  --color-danger: #d93f3f;
+
+  --color-gray-50: #f7f8fc;
+  --color-gray-100: #eef1f7;
+  --color-gray-200: #d9dde7;
+  --color-gray-300: #b7bdcc;
+  --color-gray-400: #9198ab;
+  --color-gray-500: #6d7387;
+  --color-gray-600: #52586a;
+  --color-gray-700: #3b4050;
+  --color-gray-800: #262a36;
+  --color-gray-900: #121520;
+
+  --color-surface: #ffffff;
+  --color-surface-alt: #f1f5fd;
+  --color-surface-muted: #f9fafc;
+  --color-body: var(--color-gray-900);
+  --color-text-secondary: var(--color-gray-500);
+
+  /* Typography */
+  --font-family-base: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'Roboto Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  --font-size-2xl: 2.5rem;   /* 40px */
+  --font-size-xl: 2rem;      /* 32px */
+  --font-size-lg: 1.5rem;    /* 24px */
+  --font-size-md: 1.125rem;  /* 18px */
+  --font-size-sm: 1rem;      /* 16px */
+  --font-size-xs: 0.875rem;  /* 14px */
+  --font-size-2xs: 0.75rem;  /* 12px */
+
+  --line-height-tight: 1.2;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.7;
+
+  /* Spacing (8px grid) */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.5rem;
+  --space-8: 3rem;
+  --space-9: 4rem;
+
+  /* Radius */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  /* Shadows */
+  --shadow-xs: 0 2px 4px rgba(17, 24, 39, 0.08);
+  --shadow-sm: 0 6px 14px rgba(15, 73, 198, 0.08);
+  --shadow-md: 0 12px 30px rgba(15, 73, 198, 0.12);
+  --shadow-lg: 0 18px 45px rgba(17, 24, 39, 0.18);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+
+  /* Layout */
+  --layout-max-width: 1360px;
+  --sidebar-width: 270px;
+  --sidebar-width-collapsed: 84px;
+  --topbar-height: 62px;
+}
